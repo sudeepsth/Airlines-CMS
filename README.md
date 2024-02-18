@@ -17,8 +17,9 @@
 - copy .env.example and rename it to .env
 - Update Database Name, Username and Password on .env file
 - Run command `composer install` on source folder
+- Run `php artisan key:generate` command
 - Run command `php artisan migrate:fresh --seed`
 - Run command `php artisan serve`
 
-This will run the Airlines CMS 
+This will run the Airlines CMS http://localhost:8000
 

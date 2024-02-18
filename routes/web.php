@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\AdminLoginController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DestinationController;
+use App\Http\Controllers\Admin\FlightRecordController;
 use App\Http\Controllers\Admin\FlightController;
 
 /*
@@ -23,6 +24,7 @@ Route::group([ 'middleware' => ['web', 'auth']], function () {
     Route::get('signout', [AdminLoginController::class, 'signOut'])->name('signout');
     Route::resource('destination', DestinationController::class);
     Route::resource('flight', FlightController::class);
+    Route::get('flight-record', [FlightRecordController::class, 'index'])->name('flight-record.index');
 
 });
 Route::get('/', [AdminLoginController::class, 'index'])->name('login');

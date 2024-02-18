@@ -29,7 +29,7 @@
                         <tbody>
                             @foreach($flights as $item)
                             <tr>
-                                <td>1.</td>
+                                <td></td>
                                 <td>{{ $item->airlines }} </td>
                                 <td>{{ $item->fromDestination->destination }} </td>
                                 <td>{{ $item->toDestination->destination }} </td>

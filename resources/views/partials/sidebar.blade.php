@@ -56,6 +56,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="{{ route('flight-record.index')}}" class="nav-link">
+              <i class="nav-icon fas fa-plane"></i>
+              <p>
+                Booked Record
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="{{ route('signout')}}" class="nav-link">
               <i class="nav-icon fas fa-right-from-bracket"></i>
               <p>
