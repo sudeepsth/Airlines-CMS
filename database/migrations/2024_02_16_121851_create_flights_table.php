@@ -15,12 +15,22 @@ return new class extends Migration
             $table->id();
             $table->string('airlines');
             $table->string('flight_code');
-            $table->string('from');
-            $table->string('to');
+            $table->unsignedBigInteger('from');
+            $table->unsignedBigInteger('to');
+            $table->foreign('from')
+                    ->references('id')
+                    ->on('destinations')
+                    ->onUpdate('cascade');
+            $table->foreign('to')
+                    ->references('id')
+                    ->on('destinations')
+                    ->onUpdate('cascade');
             $table->timestamp('flight_date');
             $table->unsignedInteger('flight_time');
             $table->unsignedInteger('total_seats');
-            $table->unsignedInteger('booked_seat')->default(0);
+            $table->unsignedInteger('booked_seats')->default(0);
+            $table->index('from');
+            $table->index('to');
 
             $table->timestamps();
         });
