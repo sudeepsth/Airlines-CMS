@@ -98,9 +98,7 @@ class ApiFlightController extends Controller
         }catch(\Exception $e){
             $this->log->error((string)$e);
             return response()->json(['status'=>'error','message'=>'Error while booking flight']);
-
         }
-
     }
 
     public function getFlightByReference($reference)
