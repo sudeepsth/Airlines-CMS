@@ -23,3 +23,7 @@
 
 This will run the Airlines CMS http://localhost:8000
 
+## Credentials for login
+Email: test@test.com
+Password: 123456
+
